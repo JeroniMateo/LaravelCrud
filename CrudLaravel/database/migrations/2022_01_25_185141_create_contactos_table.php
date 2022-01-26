@@ -16,11 +16,11 @@ class CreateContactosTable extends Migration
     {
         Schema::create('contactos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->integer('telefono');
-            $table->string('tipo');
-            $table->string('descripcion');
+            $table->string('nombre')->required();
+            $table->string('apellidos')->required();
+            $table->integer('telefono')->required();
+            $table->string('tipo')->nullable();
+            $table->string('descripcion')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
