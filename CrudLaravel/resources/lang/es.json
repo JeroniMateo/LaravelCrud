@@ -1,0 +1,15 @@
+{
+    "landline":"Fijo",
+    "mobile":"movil",
+    "Contact": "Contacto",
+    "Contacts": "Contactos",
+    "telephone": "telefono",
+    "type": "tipo",
+    "description": "descripcion",
+    "I need your name": "Es necesario un nombre",
+    "I need your lastname" : "Es necesario un apellido",
+    "Email not exist":"Email inexistente",
+    "Invalidate Password" : "Contraseña invalida",
+    "create" : "crear",
+    "edit": "editar"
+}

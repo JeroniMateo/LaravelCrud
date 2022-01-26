@@ -1,0 +1,14 @@
+{
+    "landline":"fix",
+    "mobile":"mòbil",
+    "Contact": "Contacte",
+    "Contacts": "Contactes",
+    "telephone": "telefon",
+    "type": "tipo",
+    "I need your name": "Es necesari un nom",
+    "I need your lastname" : "Es necesario un llinatge",
+    "Email not exist":"Email inexistent",
+    "Invalidate Password" : "Contrasenya invalida",
+    "create" : "crear",
+    "edit": "editar"
+}
