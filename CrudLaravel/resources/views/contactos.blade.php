@@ -13,15 +13,15 @@
         @csrf
         <label for="" class="form-label">
             Nombre:
-            <input type="text" name="nombre" id=""  class="form-control">
+            <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
         </label>
         <label for="" class="form-label">
             Apellidos:
-            <input type="text" name="apellidos" id="" class="form-control" >
+            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->telefono)}}" class="form-control" >
         </label>
         <label for="" class="form-label">
             Telefono:
-            <input type="number" name="telefono" id=""  class="form-control">
+            <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
         </label>
         <label for="" class="form-label">
             Tipo:
@@ -30,7 +30,7 @@
         </label>
         <label for="" class="form-label">
             Descripcion:
-            <textarea name="descripcion" id="" cols="30" rows="10"  class="form-control"></textarea>
+            <textarea name="descripcion" id="" cols="30" rows="10" value="{{old('descripcion', $contactos->descripcion)}}"  class="form-control"></textarea>
         </label>
         <button type="submit" class="btn btn-primary mb-3">Añadir</button>
     </form>
