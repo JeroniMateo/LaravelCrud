@@ -27,7 +27,7 @@
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
-        
+
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
             Telefono:
@@ -39,7 +39,7 @@
 <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <label for="" class="form-label">
             Type:
-           <select name="tipo" id="tipo" form="phonebook" class="form-control">
+           <select name="typo" id="tipo" form="phonebook" class="form-control" value="{{old('type', $contactos->descripcion)}}">
              <option value="Movil" class="form-control">Fijo</option>
              <option value="Fijo" class="form-control">Movil</option>
            </select>
@@ -53,27 +53,30 @@
           <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
+        <br>
 
 
 <!--Vinculo del Contacto-->
         <label for="">
           Relationship: <br>
-          <input type="radio" name="relationship" id="family">
+          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contactos->descripcion)}}">
           <label for="family">Family</label><br>
-          <input type="radio" name="relationship" id="friends">
+          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contactos->descripcion)}}">
           <label for="friends">Friends</label><br>
-          <input type="radio" name="relationship" id="others">
+          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contactos->descripcion)}}">
           <label for="Others">Others</label><br> 
         </label> <br>
+        {!! $errors->first('relationship','<small>:message</small><br>') !!}
 
         <!--Descripcion del Contacto-->
         <label for="" class="form-label">
-          Descripcion:
+          Description:
           <textarea name="descripcion" id="" cols="30" rows="10" value="{{old('descripcion', $contactos->descripcion)}}"  class="form-control"></textarea>
         </label>
+        {!! $errors->first('description','<small>:message</small><br>') !!}
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
-        <input type="checkbox" name="favorites" id="favorites" value="fav">
+        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->descripcion)}}">
         <label for="favorites">Favorites</label>
       
         
