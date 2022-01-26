@@ -15,6 +15,8 @@ class ContactosController extends Controller
      */
     public function index()
     {
+
+
         return view('contactos',[
             'contactos'=>Contacto::latest()
        ]);
@@ -82,7 +84,7 @@ class ContactosController extends Controller
     {
         $contactos->update($request->validated());
 
-        return redirect()->route('contactos.show', $contactos)->with('status','Contacto actualizado');
+        return redirect()->route('contactos', $contactos)->with('status','Contacto actualizado');
 
     }
 

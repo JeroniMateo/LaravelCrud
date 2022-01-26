@@ -1,0 +1,21 @@
+@extends('layout')
+
+@section('nombre', 'Editar Contacto')
+
+
+@section('content')
+<h1>Editar Contacto</h1>
+
+    
+
+    @include('partials.validation-errors')
+
+
+<form method="POST" action="{{ route('contactos.update', $contactos ) }}">
+     @method('PATCH')
+  
+    @include('contactos', ['btnText' => 'Actualizar'])
+
+</form>
+
+@endsection
