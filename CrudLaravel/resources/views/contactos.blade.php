@@ -15,14 +15,17 @@
             Nombre:
             <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
         </label>
+        {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <label for="" class="form-label">
             Apellidos:
             <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->telefono)}}" class="form-control" >
         </label>
+        {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <label for="" class="form-label">
             Telefono:
             <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
         </label>
+        {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <label for="" class="form-label">
             Tipo:
             <input type="radio" name="Fijo" id="" value="Fijo"  class="form-control">
