@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateContactosRequest;
+use App\Models\Contacto;
 use Illuminate\Http\Request;
 
 class ContactosController extends Controller
@@ -13,7 +15,9 @@ class ContactosController extends Controller
      */
     public function index()
     {
-        //
+        return view('contactos',[
+            'contactos'=>Contacto::latest()
+       ]);
     }
 
     /**
@@ -23,7 +27,9 @@ class ContactosController extends Controller
      */
     public function create()
     {
-        //
+         return view('contactos',[
+            'contactos'=> new Contacto
+        ]);
     }
 
     /**
@@ -34,7 +40,9 @@ class ContactosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Contacto::create($request->validated()); //['nombre','telefono','tipo','created_at','updated_at']
+
+       return redirect()->route('contactos')->with('status','Contacto creado');
     }
 
     /**
@@ -43,9 +51,11 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contacto $contactos)
     {
-        //
+        return view('contactos',[
+            'contactos'=> $contactos
+        ]);
     }
 
     /**
@@ -54,9 +64,11 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contacto $contactos)
     {
-        //
+        return view('contactos',[
+            'contactos'=> $contactos
+        ]);
     }
 
     /**
@@ -66,9 +78,12 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Contacto $contactos, CreateContactosRequest $request)
     {
-        //
+        $contactos->update($request->validated());
+
+        return redirect()->route('contactos.show', $contactos)->with('status','Contacto actualizado');
+
     }
 
     /**
@@ -77,8 +92,10 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contacto $contactos)
     {
-        //
+        $contactos->delete();
+
+        return redirect()->route('contactos.index')->with('status','Contacto eliminado');
     }
 }
