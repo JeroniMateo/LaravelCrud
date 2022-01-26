@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/*MessageController se encarga de controlar los Mensajes de error
+la validacion de los required y que se imprima el mensaje mendiante la varible $error */
 class MessageController extends Controller
 {
     /**
