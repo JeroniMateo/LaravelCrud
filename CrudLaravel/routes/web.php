@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactosController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('contactos','Contactos Controller');
-Route::resource('contactos','Message Controller');
+Route::resource('contactos',ContactosController::class);
+Route::resource('contactos',MessageController::class);

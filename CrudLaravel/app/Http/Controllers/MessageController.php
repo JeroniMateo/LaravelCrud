@@ -48,7 +48,7 @@ class MessageController extends Controller
             'telefono.required' => __('telephone not exist')
         ]);
 
-        return redirect()->route('contactos.index')->with('status','usuario validado');
+        return redirect()->route('contactos')->with('status','usuario validado');
 
         
 

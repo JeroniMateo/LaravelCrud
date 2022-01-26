@@ -27,6 +27,7 @@
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
+        
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
             Telefono:
@@ -49,7 +50,7 @@
 <!--Cumpleaños del Contacto-->
         <label for="" class="form-label">
           Birthday:
-          <input type="date" name="birthday" id="birthday">
+          <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
 
