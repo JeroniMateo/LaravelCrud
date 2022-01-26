@@ -35,10 +35,21 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         
+        $message = request()->validate([
+            'name'=> 'requiered',
+            'apellidos'=>'required',
+            'telefono' => 'requiered ',
+        ],
+        [
+            'name.required'=> __('I need your name'),
+            'apellidos.required'=> __('I need your lastname'),
+            'telefono.required' => __('telephone not exist')
+        ]);
 
-
+        return redirect()->route('contactos.index')->with('status','usuario validado');
 
         
+
     }
 
     /**
