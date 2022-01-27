@@ -23,7 +23,7 @@
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
             apellidos:
-            <input type="text" name="lastname" id="" value="{{old('apellidos', $contactos->apellidos)}}" class="form-control" >
+            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->apellidos)}}" class="form-control" >
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
@@ -31,7 +31,7 @@
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
             telefono:
-            <input type="number" name="telephone" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
+            <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <br>
