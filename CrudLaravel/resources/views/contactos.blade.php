@@ -12,8 +12,12 @@
     <form action="" id="phonebook">
         @csrf
 
+<!--En este fichero blade es donde sale los errores de validacion
+Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         @include('validation-errors');
-<!--Nombre del Contacto-->
+
+
+        <!--Nombre del Contacto-->
         <label for="" class="form-label">
           nombre:
             <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
@@ -71,9 +75,9 @@
         <!--Descripcion del Contacto-->
         <label for="" class="form-label">
           Description:
-          <textarea name="descripcion" id="" cols="30" rows="10" value="{{old('descripcion', $contactos->descripcion)}}"  class="form-control"></textarea>
+          <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contactos->description)}}"  class="form-control"></textarea>
         </label>
-        {!! $errors->first('descripcion','<small>:message</small><br>') !!}
+        {!! $errors->first('description','<small>:message</small><br>') !!}
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
         <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->favorites)}}">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactosController;
 use App\Http\Controllers\MessageController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,6 @@ Route::get('/', function () {
 });
 
 Route::resource('contactos',ContactosController::class);
-Route::resource('contactos',MessageController::class);
+Route::get('/home', function(){
+    return view(('home'));
+});

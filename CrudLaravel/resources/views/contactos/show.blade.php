@@ -14,8 +14,12 @@
     </form>
 
     <h1>{{$contactos->nombre}}</h1>
-    <p>{{$contactos->telefono}}</p>
+    <h2>{{$contactos->telefono}}</h2>
     <p>{{$contactos->tipo}}</p>
+    <p>{{$contactos->birthday}}</p>
+    <p>{{$contactos->relationship}}</p>
+    <p>{{$contactos->description}}</p>
+    <small>{{$contactos->favorites}}</small>
     <p>{{$contactos->created_at->diffForHumans()}}</p>
 
 @endsection

@@ -26,7 +26,8 @@ class CreateContactosRequest extends FormRequest
         return [
             'nombre'=>'required',
             'apellido'=>'required',
-            'telefono'=>'required'
+            'telefono'=>'required',
+            'relationship'=>'required'
         ];
     }
 
@@ -34,8 +35,9 @@ class CreateContactosRequest extends FormRequest
     {
         return [
             'nombre.required'=> 'El contacto necesita un nombre',
+            'apellido.required'=>'Es necesario escribir tu apellido',
             'telefono.required'=>'El contacto necesita un telefono',
-            'apellido.required'=>'Es necesario escribir tu apellido'
+            'relationship.required'=> 'Debes especificar el tipo de relacion'
         ];
     }
 }
