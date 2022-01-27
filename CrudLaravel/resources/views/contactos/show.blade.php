@@ -14,7 +14,7 @@
     </form>
 
     <h1>{{$contactos->nombre}}</h1>
-    <p>{{$contactos->telefono}}</p>
+    <p>{{$contactos->telephone}}</p>
     <p>{{$contactos->tipo}}</p>
     <p>{{$contactos->created_at->diffForHumans()}}</p>
 

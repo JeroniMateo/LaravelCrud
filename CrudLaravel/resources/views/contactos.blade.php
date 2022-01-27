@@ -15,41 +15,41 @@
         @include('validation-errors');
 <!--Nombre del Contacto-->
         <label for="" class="form-label">
-            Nombre:
+          nombre:
             <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <br>
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
-            Apellidos:
-            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->telefono)}}" class="form-control" >
+            apellidos:
+            <input type="text" name="lastname" id="" value="{{old('apellidos', $contactos->apellidos)}}" class="form-control" >
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
 
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
-            Telefono:
-            <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
+            telefono:
+            <input type="number" name="telephone" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <br>
 
 <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <label for="" class="form-label">
-            Type:
-           <select name="typo" id="tipo" form="phonebook" class="form-control" value="{{old('type', $contactos->descripcion)}}">
-             <option value="Movil" class="form-control">Fijo</option>
-             <option value="Fijo" class="form-control">Movil</option>
+            Tipo:
+           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contactos->tipo)}}">
+             <option value="Movil" class="form-control">Movil</option>
+             <option value="Fijo" class="form-control">Fijo</option>
            </select>
         </label><br>
-        {!! $errors->first('type','<small>:message</small><br>') !!}
+        {!! $errors->first('tipo','<small>:message</small><br>') !!}
         <br>
 
 <!--Cumpleaños del Contacto-->
         <label for="" class="form-label">
-          Birthday:
+          birthday:
           <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
@@ -59,11 +59,11 @@
 <!--Vinculo del Contacto-->
         <label for="">
           Relationship: <br>
-          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contactos->descripcion)}}">
+          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contactos->relationship)}}">
           <label for="family">Family</label><br>
-          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contactos->descripcion)}}">
+          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contactos->relationship)}}">
           <label for="friends">Friends</label><br>
-          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contactos->descripcion)}}">
+          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contactos->relationship)}}">
           <label for="Others">Others</label><br> 
         </label> <br>
         {!! $errors->first('relationship','<small>:message</small><br>') !!}
@@ -73,14 +73,14 @@
           Description:
           <textarea name="descripcion" id="" cols="30" rows="10" value="{{old('descripcion', $contactos->descripcion)}}"  class="form-control"></textarea>
         </label>
-        {!! $errors->first('description','<small>:message</small><br>') !!}
+        {!! $errors->first('descripcion','<small>:message</small><br>') !!}
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
-        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->descripcion)}}">
+        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->favorites)}}">
         <label for="favorites">Favorites</label>
       
         
-        <button type="submit" class="btn btn-primary mb-3">Añadir</button>
+        <button type="submit" class="btn btn-primary mb-3">{{ $btnText }}</button>
     </form>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

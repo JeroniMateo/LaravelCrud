@@ -29,7 +29,7 @@ class ContactosController extends Controller
      */
     public function create()
     {
-         return view('contactos',[
+         return view('contactos.create',[
             'contactos'=> new Contacto
         ]);
     }
@@ -42,7 +42,7 @@ class ContactosController extends Controller
      */
     public function store(Request $request)
     {
-        Contacto::create($request->validated()); //['nombre','telefono','tipo','created_at','updated_at']
+        Contacto::create($request->validated()); //['nombre','','tipo','created_at','updated_at']
 
        return redirect()->route('contactos')->with('status','Contacto creado');
     }
@@ -68,7 +68,7 @@ class ContactosController extends Controller
      */
     public function edit(Contacto $contactos)
     {
-        return view('contactos',[
+        return view('contactos.edit',[
             'contactos'=> $contactos
         ]);
     }
@@ -84,7 +84,7 @@ class ContactosController extends Controller
     {
         $contactos->update($request->validated());
 
-        return redirect()->route('contactos', $contactos)->with('status','Contacto actualizado');
+        return redirect()->route('contactos.show', $contactos)->with('status','Contacto actualizado');
 
     }
 
@@ -98,6 +98,6 @@ class ContactosController extends Controller
     {
         $contactos->delete();
 
-        return redirect()->route('contactos.index')->with('status','Contacto eliminado');
+        return redirect()->route('contactos')->with('status','Contacto eliminado');
     }
 }

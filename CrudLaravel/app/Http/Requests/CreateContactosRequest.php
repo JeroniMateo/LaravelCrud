@@ -24,18 +24,18 @@ class CreateContactosRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required',
-            'apellido'=>'required',
-            'telefono'=>'required'
+            'name'=>'required',
+            'lastname'=>'required',
+            'telephone'=>'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'nombre.required'=> 'El contacto necesita un nombre',
-            'telefono.required'=>'El contacto necesita un telefono',
-            'apellido.required'=>'Es necesario escribir tu apellido'
+            'name.required'=> 'El contacto necesita un nombre',
+            'telephone.required'=>'El contacto necesita un telefono',
+            'lastname.required'=>'Es necesario escribir tu apellido'
         ];
     }
 }
