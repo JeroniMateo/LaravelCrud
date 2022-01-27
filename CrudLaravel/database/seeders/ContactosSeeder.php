@@ -15,8 +15,8 @@ class ContactosSeeder extends Seeder
     public function run()
     {
         DB::table('contactos')->insert([
-            'nombre'=>'Bananin',
-            'apellidos'=>'DT',
+            'nombre'=>'Jeroni',
+            'apellidos'=>'Mateo',
             'telefono'=>918097765,
             'tipo'=>'Movil',
             'birthday'=>'2001/01/19',
@@ -25,13 +25,13 @@ class ContactosSeeder extends Seeder
             'favorites'=>true
         ]);
         DB::table('contactos')->insert([
-            'nombre'=>'Andrew',
-            'apellidos'=>'Jackson',
+            'nombre'=>'Rafael',
+            'apellidos'=>'Andion',
             'telefono'=>445069131,
             'tipo'=>'Fijo',
-            'birthday'=>'2011/04/01',
-            'relationship'=>'amigos',
-            'description'=>'Amigo conocido de Youtube',
+            'birthday'=>'1971/04/01',
+            'relationship'=>'otros',
+            'description'=>'Contacto Profesor 2o DAW Entorno Servidor',
             'favorites'=>false
         ]);
     }
