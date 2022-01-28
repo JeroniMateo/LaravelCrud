@@ -61,7 +61,7 @@ class ContactoPolicy
      */
     public function update(User $user, Contacto $contacto)
     {
-        return $user->role === 'admin' ||$user->id === $contacto->user_id;
+        return $user->role === 'admin';
     }
 
     /**

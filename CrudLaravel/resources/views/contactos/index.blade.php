@@ -6,7 +6,7 @@
 @section('content')
 
 <h1>@lang('contactos')</h1>
-@can('create-projects')
+@can('create', $newContacto)
     
 <a href="{{ route('contactos.create') }}">Crear Contacto</a>
 @endcan

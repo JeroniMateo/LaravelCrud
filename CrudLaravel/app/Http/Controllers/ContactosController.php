@@ -18,6 +18,7 @@ class ContactosController extends Controller
 
 //Nos lleva a la ultima vista del indice 
         return view('contactos.index',[
+            'newContacto' => new Contacto,
             'contactos'=>Contacto::latest()
        ]);
     }
@@ -30,12 +31,12 @@ class ContactosController extends Controller
     public function create()
     {
 
-            $this->authorize('create-projects');
+            $this->authorize('create', $contacto = new Contacto);
 
             //Cuando le damos a crear nuevo contacto nos lleva a la vista con el formulario para crear uno nuevo        
                      return view('contactos.create',[
                          
-                        'contactos'=> new Contacto
+                        'contactos'=> $contacto
                     ]);
         }
 
@@ -47,10 +48,11 @@ class ContactosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateContactosRequest $request)
     {
+        $contacto = new Contacto($request->validated());
 
-        $this->authorize('create-projects');
+        $this->authorize('create',$contacto);
 //Antes de crear un contacto se va a validar el nombre,apellidos, telefono, y relacion
         Contacto::create($request->validated()); //['nombre','','tipo','created_at','updated_at']
        return redirect()->route('contactos.index')->with('status','Contacto creado');
@@ -77,12 +79,14 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contacto $contactos)
+    public function edit(Contacto $contacto)
     {
+
+        $this->authorize('create',$contacto);
 
 //Nos lleva a al vista donde podemos editar el contacto 
         return view('contactos.edit',[
-            'contactos'=> $contactos
+            'contactos'=> $contacto
         ]);
     }
 
@@ -93,13 +97,13 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Contacto $contactos, CreateContactosRequest $request)
+    public function update(Contacto $contacto, CreateContactosRequest $request)
     {
-
+        $this->authorize('update',$contacto);
 //Valida el formulario y si la validación pasa lo actualiza y nos lleva a la vista del contacto con el contacto actualizado
-        $contactos->update($request->validated());
+        $contacto->update($request->validated());
 
-        return redirect()->route('contactos.show', $contactos)->with('status','Contacto actualizado');
+        return redirect ()->route('contactos.show', $contacto)->with('status','Contacto actualizado');
 
     }
 
@@ -109,11 +113,11 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contacto $contactos)
+    public function destroy(Contacto $contacto)
     {
-        
+        $this->authorize('delete',$contacto);
 //Si eliliminamos el contacto nos devuelve a la vista indice con el contacto eliminado        
-        $contactos->delete();
+        $contacto->delete();
 
         return redirect()->route('contactos.index')->with('status','Contacto eliminado');
     }

@@ -14,7 +14,7 @@ class CreateContactosRequest extends FormRequest
      */
     public function authorize()
     {
-        return Gate::allows('create-contactos');
+        return true;
     }
 
     /**
