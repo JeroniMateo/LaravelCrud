@@ -11,9 +11,9 @@
     "description":"descripcio",
     "favorits":"favorites",
     "I need your name": "Es necesari un nom",
-    "I need your lastname" : "Es necesario un llinatge",
-    "Email not exist":"Email inexistent",
-    "Invalidate Password" : "Contrasenya invalida",
+    "I need your lastname" : "Es necesari un llinatge",
+    "I need your telephone":"Es necesiri un telefon",
+    "Relationship required":" Rel·lacio necesaria",
     "create" : "crear",
     "edit": "editar"
 }

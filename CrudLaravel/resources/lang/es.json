@@ -1,5 +1,4 @@
 {
-    "favorites":"favoritos",
     "landline":"Fijo",
     "mobile":"movil",
     "Contact": "Contacto",
@@ -12,8 +11,8 @@
     "favorites":"favoritos",
     "I need your name": "Es necesario un nombre",
     "I need your lastname" : "Es necesario un apellido",
-    "Email not exist":"Email inexistente",
-    "Invalidate Password" : "Contraseña invalida",
+    "I need your telephone":"Es necesirio un telefono",
+    "Relationship required":" Relacion necesaria",
     "create" : "crear",
     "edit": "editar"
 }

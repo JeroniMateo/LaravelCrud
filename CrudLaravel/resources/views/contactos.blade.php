@@ -9,6 +9,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
+
+<!--Este es el formulario que sale cuando queremos crear o editar un contacto
+donde tiene old values para que se guarden los cambios automaticamente y los mensajes de error de validacion-->    
     <form action="" id="phonebook">
         @csrf
 
@@ -16,14 +19,14 @@
 Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         @include('validation-errors');
 
-
-        <!--Nombre del Contacto-->
+<!--Nombre del Contacto-->
         <label for="" class="form-label">
           nombre:
             <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <br>
+
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
             apellidos:

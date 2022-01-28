@@ -15,11 +15,12 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Welcome</title>
         </head>
+<!--Se da la Bienvenida al Phonebook incluyendo los contactos-->
         <body>
             <h1>Bienvenido a tu PhoneBook</h1>
-            <h3>Guarda aqui todos tus contactos </h3>
+            <h3>Guarda aqui todos tus contactos</h3>
 
-            @include('contactos')
+            @include('contactos.index')
         </body>
         </html>    
 

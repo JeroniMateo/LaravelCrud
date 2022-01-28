@@ -34,10 +34,10 @@ class CreateContactosRequest extends FormRequest
     public function messages()
     {
         return [
-            'nombre.required'=> 'El contacto necesita un nombre',
-            'apellido.required'=>'Es necesario escribir tu apellido',
-            'telefono.required'=>'El contacto necesita un telefono',
-            'relationship.required'=> 'Debes especificar el tipo de relacion'
+            'nombre.required'=> 'Es necesario un nombre',
+            'apellido.required'=>'Es necesario un apellido',
+            'telefono.required'=>'Es necesirio un telefono',
+            'relationship.required'=> 'Relacion necesaria'
         ];
     }
 }

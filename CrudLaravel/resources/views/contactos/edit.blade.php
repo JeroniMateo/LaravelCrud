@@ -12,8 +12,9 @@
 
 
 <form method="POST" action="{{ route('contactos.update', $contactos ) }}">
-     @method('PATCH')
-  
+     
+  <!--Nos lleva a la vista donde sale el formulario para edtar un contacto con errores y validaciones-->
+
     @include('contactos', ['btnText' => 'Actualizar'])
 
 </form>
