@@ -29,11 +29,17 @@ class ContactosController extends Controller
      */
     public function create()
     {
-//Cuando le damos a crear nuevo contacto nos lleva a la vista con el formulario para crear uno nuevo        
-         return view('contactos.create',[
-            'contactos'=> new Contacto
-        ]);
-    }
+
+            $this->authorize('create-projects');
+
+            //Cuando le damos a crear nuevo contacto nos lleva a la vista con el formulario para crear uno nuevo        
+                     return view('contactos.create',[
+                         
+                        'contactos'=> new Contacto
+                    ]);
+        }
+
+    
 
     /**
      * Store a newly created resource in storage.
@@ -43,6 +49,8 @@ class ContactosController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->authorize('create-projects');
 //Antes de crear un contacto se va a validar el nombre,apellidos, telefono, y relacion
         Contacto::create($request->validated()); //['nombre','','tipo','created_at','updated_at']
        return redirect()->route('contactos.index')->with('status','Contacto creado');
