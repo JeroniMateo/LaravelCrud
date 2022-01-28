@@ -23,7 +23,7 @@ class CreateContactosTable extends Migration
             $table->date('birthday')->nullable();
             $table->string('relationship')->required();
             $table->string('description')->nullable();
-            $table->string('favorites')->nullable();
+            $table->boolean('favorites')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
