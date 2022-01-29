@@ -13,15 +13,15 @@
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
 <ul>
-    @forelse($contactos as $contacto)
+    @forelse($contacto as $contacto)
     <li><a href=" {{ route('contactos.show'), $contacto }} ">
             <h2>{{ $contacto->nombre }} </h2>
             <h3>{{$contacto->telefono}}</h3>
             <p>{{$contacto->tipo}}</p>
-            <p>{{$contactos->birthday}}</p>
-            <p>{{$contactos->relationship}}</p>
-            <p>{{$contactos->description}}</p>
-            <small>{{$contactos->favorites}}</small>
+            <p>{{$contacto->birthday}}</p>
+            <p>{{$contacto->relationship}}</p>
+            <p>{{$contacto->description}}</p>
+            <small>{{$contacto->favorites}}</small>
             {{$contacto->updated_at->diffForHumans() }}</a></li>
 
 <!--En caso de que esta vacia nos sale el siguente mensaje-->
@@ -31,7 +31,7 @@
     </li>
 
     @endforelse
-    {{ $contactos->links() }}
+ 
 </ul>
 
 @endsection

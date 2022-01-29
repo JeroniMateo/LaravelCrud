@@ -64,12 +64,12 @@ class ContactosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Contacto $contactos)
+    public function show(Contacto $contacto)
     {
 
 //Nos lleva a la vista donde poedemos ver el contacto con sus campos        
         return view('contactos.show',[
-            'contactos'=> $contactos
+            'contactos'=> $contacto
         ]);
     }
 

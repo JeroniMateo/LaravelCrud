@@ -17,12 +17,12 @@ donde tiene old values para que se guarden los cambios automaticamente y los men
 
 <!--En este fichero blade es donde sale los errores de validacion
 Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
-        @include('validation-errors');
+        @include('partials.validation-errors');
 
 <!--Nombre del Contacto-->
         <label for="" class="form-label">
           nombre:
-            <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control">
+            <input type="text" name="nombre" id="" value="{{old('nombre',$contacto->nombre)}}"  class="form-control">
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <br>
@@ -30,7 +30,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
             apellidos:
-            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->apellidos)}}" class="form-control" >
+            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contacto->apellidos)}}" class="form-control" >
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
@@ -38,7 +38,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
             telefono:
-            <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control">
+            <input type="number" name="telefono" id="" value="{{old('telefono', $contacto->telefono)}}" class="form-control">
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <br>
@@ -46,7 +46,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <label for="" class="form-label">
             Tipo:
-           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contactos->tipo)}}">
+           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contacto->tipo)}}">
              <option value="Movil" class="form-control">Movil</option>
              <option value="Fijo" class="form-control">Fijo</option>
            </select>
@@ -57,7 +57,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Cumpleaños del Contacto-->
         <label for="" class="form-label">
           birthday:
-          <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
+          <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contacto->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
         <br>
@@ -66,11 +66,11 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Vinculo del Contacto-->
         <label for="">
           Relationship: <br>
-          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contactos->relationship)}}">
+          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contacto->relationship)}}">
           <label for="family">Family</label><br>
-          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contactos->relationship)}}">
+          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contacto->relationship)}}">
           <label for="friends">Friends</label><br>
-          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contactos->relationship)}}">
+          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contacto->relationship)}}">
           <label for="Others">Others</label><br> 
         </label> <br>
         {!! $errors->first('relationship','<small>:message</small><br>') !!}
@@ -78,12 +78,12 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <!--Descripcion del Contacto-->
         <label for="" class="form-label">
           Description:
-          <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contactos->description)}}"  class="form-control"></textarea>
+          <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contacto->description)}}"  class="form-control"></textarea>
         </label>
         {!! $errors->first('description','<small>:message</small><br>') !!}
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
-        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->favorites)}}">
+        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contacto->favorites)}}">
         <label for="favorites">Favorites</label>
       
         
