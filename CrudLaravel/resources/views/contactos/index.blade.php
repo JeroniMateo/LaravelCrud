@@ -13,7 +13,7 @@
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
 <ul>
-    @forelse($contacto as $contacto)
+    @forelse($contactos as $contacto)
     <li><a href=" {{ route('contactos.show'), $contacto }} ">
             <h2>{{ $contacto->nombre }} </h2>
             <h3>{{$contacto->telefono}}</h3>
@@ -31,7 +31,7 @@
     </li>
 
     @endforelse
- 
+    {{ $contactos->links()}}
 </ul>
 
 @endsection
