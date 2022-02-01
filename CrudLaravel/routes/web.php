@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-    Route::resource('contactos', ContactosController::class)->middleware(['auth']);
+Route::resource('contactos', ContactosController::class)->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

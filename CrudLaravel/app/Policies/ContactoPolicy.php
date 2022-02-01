@@ -13,9 +13,7 @@ class ContactoPolicy
 
     public function before($user, $ability)
     {
-      if($user->role === 'superadmin'){
-          return true;
-      };
+     
     }
 
     /**

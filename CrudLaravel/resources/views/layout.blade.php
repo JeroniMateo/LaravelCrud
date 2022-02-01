@@ -17,7 +17,9 @@
 </head>
 <body>
     @include('contactos')
-    
+    @include('partials.nav')
+
+    @include('partials.session-status')
     @yield('content')
 </body>
 </html>

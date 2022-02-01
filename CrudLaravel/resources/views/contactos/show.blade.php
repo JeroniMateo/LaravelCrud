@@ -15,6 +15,7 @@
     <p>{{$contacto->description}}</p>
     <small>{{$contacto->favorites}}</small>
     <p>{{$contacto->created_at->diffForHumans()}}</p>
+    
 @can('update', $contacto)
 <a href="{{ route('contactos.edit', $contacto) }}">Editar Contacto</a>
 @endcan
