@@ -82,7 +82,7 @@ class ContactosController extends Controller
     public function edit(Contacto $contacto)
     {
 
-        $this->authorize('create',$contacto);
+        $this->authorize('update',$contacto);
 
 //Nos lleva a al vista donde podemos editar el contacto 
         return view('contactos.edit',[

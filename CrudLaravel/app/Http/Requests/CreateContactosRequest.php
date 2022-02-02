@@ -28,7 +28,6 @@ class CreateContactosRequest extends FormRequest
             'nombre'=>'required',
             'apellido'=>'required',
             'telefono'=>'required',
-            'relationship'=>'required'
         ];
     }
 
@@ -38,7 +37,6 @@ class CreateContactosRequest extends FormRequest
             'nombre.required'=> 'Es necesario un nombre',
             'apellido.required'=>'Es necesario un apellido',
             'telefono.required'=>'Es necesirio un telefono',
-            'relationship.required'=> 'Relacion necesaria'
         ];
     }
 }

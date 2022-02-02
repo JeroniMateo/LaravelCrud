@@ -22,7 +22,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Nombre del Contacto-->
         <label for="" class="form-label">
           nombre:
-            <input type="text" name="nombre" id="" value="{{old('nombre',$contacto->nombre)}}"  class="form-control">
+            <input type="text" name="nombre" id="" value="{{old('nombre',$contacto->nombre)}}"  class="form-control" required>
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <br>
@@ -30,7 +30,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
             apellidos:
-            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contacto->apellidos)}}" class="form-control" >
+            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contacto->apellidos)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
@@ -38,7 +38,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
             telefono:
-            <input type="number" name="telefono" id="" value="{{old('telefono', $contacto->telefono)}}" class="form-control">
+            <input type="number" name="telefono" id="" value="{{old('telefono', $contacto->telefono)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <br>

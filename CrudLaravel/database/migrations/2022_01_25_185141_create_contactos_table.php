@@ -21,7 +21,7 @@ class CreateContactosTable extends Migration
             $table->integer('telefono')->required()->unique();
             $table->string('tipo')->nullable();
             $table->date('birthday')->nullable();
-            $table->string('relationship')->required();
+            $table->string('relationship')->nullable();
             $table->string('description')->nullable();
             $table->boolean('favorites')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
