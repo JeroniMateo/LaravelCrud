@@ -12,12 +12,12 @@
 </style>
 
 
-<a href="{{ route('contactos.create') }}">Crear Contacto</a>
+<a href="{{ route('contactos.create') }}">@lang('Crear Contacto')</a>
 
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
 <ul> @forelse($contactos as $contacto)
-    <a href="{{ route('contactos.edit', $contacto) }}">Editar Contacto</a>   <a href="{{ route('contactos.distroy', $contacto) }}">Eliminar Contacto</a>   
+    <a href="{{ route('contactos.edit', $contacto) }}">Editar Contacto</a>    
     <h1>{{ $contacto->nombre }} {{ $contacto->apellidos }}</h1>  
         <label for=""> <b>@lang('Telephon'):</b> {{ $contacto->telefono }}</label>
         <p>  <b>@lang('Type'):</b>{{ $contacto->tipo }}</p> 

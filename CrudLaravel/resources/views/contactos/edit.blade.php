@@ -11,7 +11,7 @@
     @include('partials.validation-errors')
 
 
-<form method="POST" action="{{ route('contactos.update', $contacto ) }}">
+<form method="POST" action="{{ route('contactos.update', $contactos ) }}">
      
   <!--Nos lleva a la vista donde sale el formulario para edtar un contacto con errores y validaciones-->
 

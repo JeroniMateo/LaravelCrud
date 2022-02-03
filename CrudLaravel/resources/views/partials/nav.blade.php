@@ -1,7 +1,7 @@
 <nav>
     <ul>
-        <li ><a href="@lang('home')">@lang('Home')</a></li>
-        <li ><a href="@lang('contactos.index')">@lang('contactos')</a></li>
+        
+        <li ><a href="{{ route('contactos.index') }}">@lang('contactos')</a></li>
 
         @guest
             <li><a href="{{route('login')}}">Login</a></li>
