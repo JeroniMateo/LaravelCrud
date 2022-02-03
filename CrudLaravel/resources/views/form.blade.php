@@ -30,7 +30,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
       <!--Nombre del Contacto-->
       <div class="row mb-3 gx-3">
         <div class="col col-md-1">
-          <label for="" class="form-label"><b>@lang('name'):</b></label>
+          <label for="" class="form-label"><b>@lang('Name'):</b></label>
           <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}" class="form-control"
             required>
           {!! $errors->first('nombre','<small>:message</small><br>') !!}
@@ -39,7 +39,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
         <!--Apellido del Contacto-->
         <div class="col col-md-1">
-          <label for="" class="form-label"><b>@lang('lastname'):</b></label>
+          <label for="" class="form-label"><b>@lang('Lastname'):</b></label>
           <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->apellidos)}}"
             class="form-control" required>
           {!! $errors->first('apellidos','<small>:message</small><br>') !!}
@@ -48,7 +48,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
         <!--Telefono del Contacto-->
         <div class="col col-1">
-          <label for="" class="form-label"><b>@lang('telephone'):</b></label>
+          <label for="" class="form-label"><b>@lang('Telephone'):</b></label>
           <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}"
             class="form-control" required>
           {!! $errors->first('telefono','<small>:message</small><br>') !!}
@@ -57,7 +57,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
         <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <div class="col-1">
-          <label for="" class="form-label"><b>@lang('type'):</b></label>
+          <label for="" class="form-label"><b>@lang('Type'):</b></label>
           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contactos->tipo)}}">
             <option value="Movil" class="form-control">Movil</option>
             <option value="Fijo" class="form-control">Fijo</option>
@@ -68,7 +68,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
         <!--Cumpleaños del Contacto-->
         <div class="col-1">
-          <label for="" class="form-label"><b>@lang('birthday'):</b></label>
+          <label for="" class="form-label"><b>@lang('Birthday'):</b></label>
           <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
           {!! $errors->first('birthday','<small>:message</small><br>') !!}
         </div>
@@ -77,7 +77,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <!--Vinculo del Contacto-->
         <div class="col-1">
           <label for="">
-            <b>@lang('relationship'):</b>
+            <b>@lang('Relationship'):</b>
             <input type="radio" name="relationship" id="family"
               value="{{old('relationship', $contactos->relationship)}}">
             <label for="family">Family</label><br>
@@ -95,7 +95,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <!--Descripcion del Contacto-->
         <div class="col-2">
           <label for="" class="form-label">
-            <b>@lang('description'):</b>
+            <b>@lang('Description'):</b>
             <textarea name="description" id="" cols="20" rows="2"
               value="{{old('description', $contactos->description)}}" class="form-control"></textarea>
           </label>
@@ -107,7 +107,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <div class="col-1">
           <input type="checkbox" name="favorites" id="favorites" value="fav"
             value="{{old('favorites', $contactos->favorites)}}">
-          <label for="favorites"><b>@lang('favorites')</b></label>
+          <label for="favorites"><b>@lang('Favorites')</b></label>
         </div>
         <br>
 

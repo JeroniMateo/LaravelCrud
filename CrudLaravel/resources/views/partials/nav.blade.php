@@ -1,7 +1,7 @@
 <nav>
     <ul>
         
-        <button><a href="{{ route('contactos.index') }}">@lang('contactos')</a></button>
+        <button><a href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
         
         <br>
         @guest

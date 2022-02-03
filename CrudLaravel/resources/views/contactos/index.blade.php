@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('nombre', 'contactos')
+@section('nombre', 'Contactos')
 
 
 @section('content')
