@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('nombre', 'Home')
+@section('nombre', 'Phonebook Home')
 
 @section('content')
     <h1>@lang('Home')</h1>
     @auth
-    {{ auth()->user()->name }}
+   
     
         <!DOCTYPE html>
         <html lang="en">
@@ -17,10 +17,10 @@
         </head>
 <!--Se da la Bienvenida al Phonebook incluyendo los contactos-->
         <body>
-            <h1>Bienvenido a tu PhoneBook</h1>
+            <h1>Bienvenido  {{ auth()->user()->name }} a tu PhoneBook</h1>
             <h3>Guarda aqui todos tus contactos</h3>
-
-            @include('contactos.index')
+            
+            
         </body>
         </html>    
 

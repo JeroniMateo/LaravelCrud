@@ -83,7 +83,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <label for="favorites"><b>@lang('favorites')</b></label>
         <br>
         <br>
-        <button type="button" class="btn btn-primary mb-3">Enviar</button>
+        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
     </form>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
