@@ -3,7 +3,7 @@
 @section('nombre', 'Phonebook Home')
 
 @section('content')
-    <h1>@lang('Home')</h1>
+    <h1>Home</h1>
     @auth
    
     

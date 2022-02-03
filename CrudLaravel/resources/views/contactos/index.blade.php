@@ -12,12 +12,12 @@
 </style>
 
 
-<a href="{{ route('contactos.create') }}">@lang('Crear Contacto')</a>
+<button><a href="{{ route('contactos.create') }}">@lang('New Contact')</a></button>
 
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
 <ul> @forelse($contactos as $contacto)
-    <a href="{{ route('contactos.edit', $contacto) }}">Editar Contacto</a>    
+    <button><a href="{{ route('contactos.edit', $contacto) }}">@lang('Edit Contact')</a></button>
     <h1>{{ $contacto->nombre }} {{ $contacto->apellidos }}</h1>  
         <label for=""> <b>@lang('Telephon'):</b> {{ $contacto->telefono }}</label>
         <p>  <b>@lang('Type'):</b>{{ $contacto->tipo }}</p> 
@@ -30,7 +30,7 @@
 
 <!--En caso de que esta vacia nos sale el siguente mensaje-->
     @empty
-    <li>@lang('No hay contactos en la Agenda')</li>
+    <li>@lang('Phonebook Empty')</li>
 
     @endforelse
 </ul>
