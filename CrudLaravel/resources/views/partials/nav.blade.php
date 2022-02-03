@@ -1,7 +1,7 @@
 <nav>
     <ul>
-        <li class="{{setActive('home')}}"><a href="@lang('home')">@lang('Home')</a></li>
-        <li class="{{setActive('contactos.*')}}"><a href="@lang('contactos.index')">@lang('contactos')</a></li>
+        <li ><a href="@lang('home')">@lang('Home')</a></li>
+        <li ><a href="@lang('contactos.index')">@lang('contactos')</a></li>
 
         @guest
             <li><a href="{{route('login')}}">Login</a></li>

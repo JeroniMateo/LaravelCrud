@@ -15,12 +15,13 @@ class ContactosController extends Controller
      */
     public function index()
     {
-
+        $contactos = Contacto::all();
+        return view('contactos.index', compact('contactos'));
 //Nos lleva a la ultima vista del indice 
-        return view('contactos.index',[
-            'newContacto' => new Contacto,
-            'contactos'=>Contacto::latest()
-       ]);
+      /*   return view('contactos.index',[
+            'contactos'=>Contacto::all(),
+            'newContacto' => new Contacto
+       ]); */
     }
 
     /**

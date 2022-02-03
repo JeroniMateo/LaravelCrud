@@ -7,9 +7,9 @@
 <h1>@lang('contactos')</h1>
 
 
-@can('create', $newContacto)
+
 <a href="{{ route('contactos.create') }}">Crear Contacto</a>
-@endcan
+
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
 <ul>

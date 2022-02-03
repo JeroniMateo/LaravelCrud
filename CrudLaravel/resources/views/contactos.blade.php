@@ -14,14 +14,13 @@
 donde tiene old values para que se guarden los cambios automaticamente y los mensajes de error de validacion-->    
     <form action="" id="phonebook">
         @csrf
-
 <!--En este fichero blade es donde sale los errores de validacion
 Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         @include('partials.validation-errors');
 
 <!--Nombre del Contacto-->
         <label for="" class="form-label">
-          nombre:
+          @lang('name') :
             <input type="text" name="nombre" id="" value="{{old('nombre',$contacto->nombre)}}"  class="form-control" required>
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
@@ -29,7 +28,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
-            apellidos:
+            @lang('lastname'):
             <input type="text" name="apellidos" id="" value="{{old('apellidos', $contacto->apellidos)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
@@ -37,7 +36,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
-            telefono:
+            @lang('telephone'):
             <input type="number" name="telefono" id="" value="{{old('telefono', $contacto->telefono)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
@@ -45,7 +44,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <label for="" class="form-label">
-            Tipo:
+            @lang('type'):
            <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contacto->tipo)}}">
              <option value="Movil" class="form-control">Movil</option>
              <option value="Fijo" class="form-control">Fijo</option>
@@ -56,7 +55,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Cumpleaños del Contacto-->
         <label for="" class="form-label">
-          birthday:
+          @lang('birthday'):
           <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contacto->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
@@ -65,7 +64,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Vinculo del Contacto-->
         <label for="">
-          Relationship: <br>
+          @lang('relationship'): <br>
           <input type="radio" name="relationship" id="family" value="{{old('relationship', $contacto->relationship)}}">
           <label for="family">Family</label><br>
           <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contacto->relationship)}}">
@@ -77,17 +76,17 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
         <!--Descripcion del Contacto-->
         <label for="" class="form-label">
-          Description:
+          @lang('description'):
           <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contacto->description)}}"  class="form-control"></textarea>
         </label>
         {!! $errors->first('description','<small>:message</small><br>') !!}
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
         <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contacto->favorites)}}">
-        <label for="favorites">Favorites</label>
+        <label for="favorites">@lang('favorites')</label>
       
         
-        <button type="submit" class="btn btn-primary mb-3">{{ $btnText }}</button>
+        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
     </form>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
