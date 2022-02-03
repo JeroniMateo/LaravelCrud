@@ -9,7 +9,11 @@
     <title>Hello, world!</title>
   </head>
   <body>
-
+    <style>
+      form{
+        margin-left: 2vh
+      }
+    </style>
 <!--Este es el formulario que sale cuando queremos crear o editar un contacto
 donde tiene old values para que se guarden los cambios automaticamente y los mensajes de error de validacion-->    
     <form action="" id="phonebook">
@@ -17,35 +21,34 @@ donde tiene old values para que se guarden los cambios automaticamente y los men
 <!--En este fichero blade es donde sale los errores de validacion
 Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         @include('partials.validation-errors');
-
 <!--Nombre del Contacto-->
         <label for="" class="form-label">
-          @lang('name') :
-            <input type="text" name="nombre" id="" value="{{old('nombre',$contacto->nombre)}}"  class="form-control" required>
+          <b>@lang('name'):</b>
+            <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}"  class="form-control" required>
         </label><br>
         {!! $errors->first('nombre','<small>:message</small><br>') !!}
         <br>
 
 <!--Apellido del Contacto-->
         <label for="" class="form-label">
-            @lang('lastname'):
-            <input type="text" name="apellidos" id="" value="{{old('apellidos', $contacto->apellidos)}}" class="form-control" required>
+          <b>@lang('lastname'):</b>
+          <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->apellidos)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('apellidos','<small>:message</small><br>') !!}
         <br>
 
 <!--Telefono del Contacto-->
         <label for="" class="form-label">
-            @lang('telephone'):
-            <input type="number" name="telefono" id="" value="{{old('telefono', $contacto->telefono)}}" class="form-control" required>
+           <b>@lang('telephone'):</b>
+            <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}" class="form-control" required>
         </label><br>
         {!! $errors->first('telefono','<small>:message</small><br>') !!}
         <br>
 
 <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
         <label for="" class="form-label">
-            @lang('type'):
-           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contacto->tipo)}}">
+            <b>@lang('type'):</b>
+           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contactos->tipo)}}">
              <option value="Movil" class="form-control">Movil</option>
              <option value="Fijo" class="form-control">Fijo</option>
            </select>
@@ -55,8 +58,8 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Cumpleaños del Contacto-->
         <label for="" class="form-label">
-          @lang('birthday'):
-          <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contacto->birthday)}}">
+          <b>@lang('birthday'):</b>
+          <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
         </label><br>
         {!! $errors->first('birthday','<small>:message</small><br>') !!}
         <br>
@@ -64,29 +67,29 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
 
 <!--Vinculo del Contacto-->
         <label for="">
-          @lang('relationship'): <br>
-          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contacto->relationship)}}">
+          <b>@lang('relationship'):</b>
+          <input type="radio" name="relationship" id="family" value="{{old('relationship', $contactos->relationship)}}">
           <label for="family">Family</label><br>
-          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contacto->relationship)}}">
+          <input type="radio" name="relationship" id="friends" value="{{old('relationship', $contactos->relationship)}}">
           <label for="friends">Friends</label><br>
-          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contacto->relationship)}}">
+          <input type="radio" name="relationship" id="others" value="{{old('relationship', $contactos->relationship)}}">
           <label for="Others">Others</label><br> 
         </label> <br>
         {!! $errors->first('relationship','<small>:message</small><br>') !!}
-
+        <br>
         <!--Descripcion del Contacto-->
         <label for="" class="form-label">
-          @lang('description'):
-          <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contacto->description)}}"  class="form-control"></textarea>
-        </label>
+          <b>@lang('description'):</b>
+          <textarea name="description" id="" cols="30" rows="10" value="{{old('description', $contactos->description)}}"  class="form-control"></textarea>
+        </label><br>
         {!! $errors->first('description','<small>:message</small><br>') !!}
-        
+        <br>
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
-        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contacto->favorites)}}">
-        <label for="favorites">@lang('favorites')</label>
-      
-        
-        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+        <input type="checkbox" name="favorites" id="favorites" value="fav" value="{{old('favorites', $contactos->favorites)}}">
+        <label for="favorites"><b>@lang('favorites')</b></label>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary mb-3">Enviar</button>
     </form>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

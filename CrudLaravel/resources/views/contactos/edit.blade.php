@@ -15,7 +15,7 @@
      
   <!--Nos lleva a la vista donde sale el formulario para edtar un contacto con errores y validaciones-->
 
-    @include('contactos')
+    @include('form')
 
 </form>
 

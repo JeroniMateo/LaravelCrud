@@ -16,16 +16,16 @@
     <small>{{$contacto->favorites}}</small>
     <p>{{$contacto->created_at->diffForHumans()}}</p>
     
-@can('update', $contacto)
+
 <a href="{{ route('contactos.edit', $contacto) }}">Editar Contacto</a>
-@endcan
+
     
-@can('delete', $contacto)
+
   
 <form id="delete" action="{{ route('contactos.destroy', $contacto) }}" method="POST">
   @csrf @method('DELETE')
   <button>Eliminar</button>
 </form>
-@endcan
+@include('contactos.index')
 
 @endsection

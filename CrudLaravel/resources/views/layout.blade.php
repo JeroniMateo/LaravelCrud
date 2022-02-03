@@ -7,7 +7,7 @@
     <title>Document</title>
 
 
-    <title>@yield('nombre','contactos')</title>
+    <title>@yield('nombre','Contactos')</title>
     <style>
         .active a{
             color: red;
@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    @include('contactos')
+    
     @include('partials.nav')
 
     @include('partials.session-status')
