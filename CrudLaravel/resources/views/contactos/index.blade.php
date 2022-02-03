@@ -23,13 +23,13 @@
             <h1>{{ $contacto->nombre }} {{ $contacto->apellidos }}</h1>  
         </div>
         <div class="col col-md-2">
-            <p><b>@lang('Telephon'):</b> {{ $contacto->telefono }}</p>
+            <p><b>@lang('Telephone'):</b> {{ $contacto->telefono }}</p>
         </div>
         <div class="col col-md-2">
             <p><b>@lang('Type'):</b>{{ $contacto->tipo }}</p> 
         </div>
         <div class="col col-md-1">
-            <p><b>@lang('telephone'):</b> {{ $contacto->birthday }}</p>
+            <p><b>@lang('Birthday'):</b> {{ $contacto->birthday }}</p>
         </div>
         <div class="col col-md-1">
             <p><b>@lang('Relationship'):</b> {{ $contacto->relationship }}</p>

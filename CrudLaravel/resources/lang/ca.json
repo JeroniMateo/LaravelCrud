@@ -15,6 +15,10 @@
     "phonebook":"agenda",
     "Phonebook":"Agenda",
 
+    "Welcome":"Benvingut",
+    "to your Phonebook":"a la teva Agenda",
+    "Save here all your contacts":"Guarda aqui els teus contactes",
+    
     
     "A new verification link has been sent to the email address you provided during registration.": "Un nou enllaç de verificació ha estat enviat a l'adreça electrònica que heu proporcionat durant el registre.",
     "Accept Invitation": "Acceptar La Invitació",
