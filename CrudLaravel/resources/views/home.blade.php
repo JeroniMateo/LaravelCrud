@@ -20,7 +20,8 @@
             <h1>Bienvenido  {{ auth()->user()->name }} a tu PhoneBook</h1>
             <h3>Guarda aqui todos tus contactos</h3>
             
-            
+            <img src="{{ asset('img/phonebook.png') }}" alt="">
+
         </body>
         </html>    
 

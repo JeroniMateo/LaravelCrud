@@ -2,6 +2,7 @@
     <ul>
         
         <button><a href="{{ route('contactos.index') }}">@lang('contactos')</a></button>
+        
         <br>
         @guest
             <li><a href="{{route('login')}}">Login</a></li>
