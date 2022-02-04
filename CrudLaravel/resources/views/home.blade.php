@@ -1,5 +1,3 @@
-@extends('layout')
-
 @section('nombre', 'Phonebook Home')
 
 @section('content')
