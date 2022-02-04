@@ -52,8 +52,10 @@
             <td>{{ $contacto->description }}</td>
             <td>{{ $contacto->favorites }}</td>
             <td>
-                <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}">Edit</a>
-                <button class="btn btn-danger">Delete</button>
+                
+                    <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}">Edit</a>
+                    <button class="btn btn-danger">Delete</button>
+                </form>
             </td>
         </tr>
         

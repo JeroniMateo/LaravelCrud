@@ -21,7 +21,7 @@
   <div class="modal-body">
     <!--Este es el formulario que sale cuando queremos crear o editar un contacto
 donde tiene old values para que se guarden los cambios automaticamente y los mensajes de error de validacion-->
-    <form class="row g-3 p-2" action="" id="phonebook">
+    <form class="row g-3 p-2" action="{{ route('contactos.index') }}" id="phonebook">
       @csrf
       <!--En este fichero blade es donde sale los errores de validacion
 Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
@@ -29,7 +29,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
       
       <!--Nombre del Contacto-->
       <div class="row mb-3 gx-3">
-        <div class="col col-md-1">
+        <div class="mb-3">
           <label for="" class="form-label"><b>@lang('Name'):</b></label>
           <input type="text" name="nombre" id="" value="{{old('nombre',$contactos->nombre)}}" class="form-control"
             required>
@@ -37,8 +37,8 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         </div>
 
         <br>
-        <!--Apellido del Contacto-->
-        <div class="col col-md-1">
+        <!--Apellidos del Contacto-->
+        <div class="mb-3">
           <label for="" class="form-label"><b>@lang('Lastname'):</b></label>
           <input type="text" name="apellidos" id="" value="{{old('apellidos', $contactos->apellidos)}}"
             class="form-control" required>
@@ -47,7 +47,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
 
         <!--Telefono del Contacto-->
-        <div class="col col-1">
+        <div class="mb-3">
           <label for="" class="form-label"><b>@lang('Telephone'):</b></label>
           <input type="number" name="telefono" id="" value="{{old('telefono', $contactos->telefono)}}"
             class="form-control" required>
@@ -56,7 +56,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
 
         <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
-        <div class="col-1">
+        <div class="mb-3">
           <label for="" class="form-label"><b>@lang('Type'):</b></label>
           <select name="tipo" id="tipo" form="phonebook" class="form-control" value="{{old('tipo', $contactos->tipo)}}">
             <option value="Movil" class="form-control">Movil</option>
@@ -67,7 +67,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
 
         <!--Cumpleaños del Contacto-->
-        <div class="col-1">
+        <div class="mb-3">
           <label for="" class="form-label"><b>@lang('Birthday'):</b></label>
           <input type="date" name="birthday" id="birthday" value="{{old('birthday', $contactos->birthday)}}">
           {!! $errors->first('birthday','<small>:message</small><br>') !!}
@@ -75,7 +75,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
 
         <!--Vinculo del Contacto-->
-        <div class="col-1">
+        <div class="mb-3">
           <label for="">
             <b>@lang('Relationship'):</b>
             <input type="radio" name="relationship" id="family"
@@ -93,7 +93,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
         
         <!--Descripcion del Contacto-->
-        <div class="col-2">
+        <div class="mb-3">
           <label for="" class="form-label">
             <b>@lang('Description'):</b>
             <textarea name="description" id="" cols="20" rows="2"
@@ -104,14 +104,14 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
         
         <!--Añadir el Contacto a favoritos mediante un checkbox-->
-        <div class="col-1">
+        <div class="mb-3">
           <input type="checkbox" name="favorites" id="favorites" value="fav"
             value="{{old('favorites', $contactos->favorites)}}">
           <label for="favorites"><b>@lang('Favorites')</b></label>
         </div>
         <br>
 
-        <div class="col-1">
+        <div class="mb-3">
           <a href="{{route('contactos.index')}}"  class="btn btn-secondary mb-3">Cancelar</a>
           <button type="submit" class="btn btn-primary mb-3">Enviar</button>
     </form>
