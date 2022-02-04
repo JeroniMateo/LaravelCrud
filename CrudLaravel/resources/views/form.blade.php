@@ -9,7 +9,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Hello, world!</title>
+  <title>Form Phonebook</title>
 </head>
 
 <body>
@@ -77,7 +77,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <!--Vinculo del Contacto-->
         <div class="mb-3">
           <label for="">
-            <b>@lang('Relationship'):</b>
+            <b>@lang('Relationship'):</b><br>
             <input type="radio" name="relationship" id="family"
               value="{{old('relationship', $contactos->relationship)}}">
             <label for="family">Family</label><br>
