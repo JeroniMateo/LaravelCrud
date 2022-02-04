@@ -1,13 +1,14 @@
 <nav>
     <ul>
         
-        <button><a href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
+        <button class="btn btn-warning"><a  class="link-dark"    href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
+     <br>
         
-        <br>
         @guest
             <li><a href="{{route('login')}}">Login</a></li>
         @else
-            <button><a href="#"    onclick="event.preventDefault();
+        
+            <button class="btn btn-dark"><a  href="#" class=""   onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();"> 
                 Cerrar Sesion</a></button>
             

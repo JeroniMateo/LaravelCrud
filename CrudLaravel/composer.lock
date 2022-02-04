@@ -516,16 +516,16 @@
         },
         {
             "name": "dragon-code/support",
-            "version": "v5.6.2",
+            "version": "v5.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TheDragonCode/support.git",
-                "reference": "38479ddf365ba4df9854b443a416503857ec41f7"
+                "reference": "95cb1a1be75242103fb4dfa6adf0cc74add0f472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TheDragonCode/support/zipball/38479ddf365ba4df9854b443a416503857ec41f7",
-                "reference": "38479ddf365ba4df9854b443a416503857ec41f7",
+                "url": "https://api.github.com/repos/TheDragonCode/support/zipball/95cb1a1be75242103fb4dfa6adf0cc74add0f472",
+                "reference": "95cb1a1be75242103fb4dfa6adf0cc74add0f472",
                 "shasum": ""
             },
             "require": {
@@ -603,7 +603,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-01-25T09:35:13+00:00"
+            "time": "2022-02-04T10:43:19+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -6483,12 +6483,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                },
                 "files": [
                     "src/DeepCopy/deep_copy.php"
-                ]
+                ],
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
