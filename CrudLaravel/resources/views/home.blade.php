@@ -15,12 +15,13 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Welcome</title>
         </head>
-        <img src="{{ asset('img/phonebook.png') }}" alt="">
-<!--Se da la Bienvenida al Phonebook incluyendo los contactos-->
+        <!--Se da la Bienvenida al Phonebook incluyendo los contactos-->
         <body>
-            <h1>Welcome  {{ auth()->user()->name }} to your Phonebook</h1>
-            <h3>Save here all your contacts</h3>
+            <h1> @lang('Welcome') {{ auth()->user()->name }} @lang('to your Phonebook')</h1>
+            <h2> @lang('Save here all your contacts')</h2>
+            <p>Click on the Phonebook img </p><br>
             
+            <button><a href="{{ route('contactos.index') }}"><img src="{{ asset('img/phonebook.png') }}" alt=""></a></button>
 
         </body>
         </html>    
