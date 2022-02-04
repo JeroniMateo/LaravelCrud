@@ -19,6 +19,9 @@
     "to your Phonebook":"a tu Agenda",
     "Save here all your contacts":"Guarda aqui tus contactos",
 
+    "Edit":"Editar",
+    "Delete":"Eliminar",
+
 
     "A new verification link has been sent to the email address you provided during registration.": "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionó durante el registro.",
     "Accept Invitation": "Aceptar invitación",
@@ -47,7 +50,7 @@
     "Confirm": "Confirmar",
     "Confirm Password": "Confirmar contraseña",
     "Contact": "Contacto",
-    "Contacts": "Contactos",
+    
     "create": "crear",
     "Create": "Crear",
     "Create a new team to collaborate with others on projects.": "Cree un nuevo equipo para colaborar con otros en proyectos.",
@@ -58,7 +61,7 @@
     "Created.": "Creado.",
     "Current Password": "Contraseña actual",
     "Dashboard": "Panel",
-    "Delete": "Eliminar",
+    
     "Delete Account": "Borrar cuenta",
     "Delete API Token": "Borrar token API",
     "Delete Team": "Borrar equipo",
@@ -107,7 +110,7 @@
     "Manage Role": "Administrar rol",
     "Manage Team": "Administrar equipo",
     "mobile": "movil",
-    "Name": "Nombre",
+    
     "New Password": "Nueva Contraseña",
     "Not Found": "No encontrado",
     "of": "de",

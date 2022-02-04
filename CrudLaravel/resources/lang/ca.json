@@ -18,6 +18,9 @@
     "Welcome":"Benvingut",
     "to your Phonebook":"a la teva Agenda",
     "Save here all your contacts":"Guarda aqui els teus contactes",
+
+    "Edit":"Editar",
+    "Delete":"Esborrar",
     
     
     "A new verification link has been sent to the email address you provided during registration.": "Un nou enllaç de verificació ha estat enviat a l'adreça electrònica que heu proporcionat durant el registre.",
@@ -47,7 +50,7 @@
     "Confirm": "Confirmar",
     "Confirm Password": "Confirmar contrasenya",
     "Contact": "Contacte",
-    "Contacts": "Contactes",
+    
     "create": "crear",
     "Create": "Crear",
     "Create a new team to collaborate with others on projects.": "Crear un equip nou a col·laborar amb els altres en projectes.",
@@ -58,7 +61,7 @@
     "Created.": "Creat.",
     "Current Password": "Contrasenya Actual",
     "Dashboard": "Tauler de control",
-    "Delete": "Esborrar",
+    
     "Delete Account": "Esborra El Compte",
     "Delete API Token": "Esborrar API Fitxa",
     "Delete Team": "Esborrar Equip",
@@ -108,7 +111,7 @@
     "Manage Role": "Gestionar El Paper",
     "Manage Team": "Gestionar L'Equip De",
     "mobile": "mòbil",
-    "Name": "Nom",
+    
     "New Password": "Contrasenya Nova",
     "Not Found": "No trobat",
     "of": "de",

@@ -112,7 +112,7 @@ Salen tanto al incio como debajo de cada uno de los respectivos inputs-->
         <br>
 
         <div class="col-1">
-          <button href="{{route('contactos.index')}}" type="submit" class="btn btn-secondary mb-3">Enviar</button>
+          <a href="{{route('contactos.index')}}"  class="btn btn-secondary mb-3">Cancelar</a>
           <button type="submit" class="btn btn-primary mb-3">Enviar</button>
     </form>
   </div>

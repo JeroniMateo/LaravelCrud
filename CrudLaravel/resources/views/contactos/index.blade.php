@@ -52,8 +52,8 @@
             <td>{{ $contacto->description }}</td>
             <td>{{ $contacto->favorites }}</td>
             <td>
-                <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}"><i class="fas fa-edit"></i></a>
-                <button class="btn btn-danger">Edit</button>
+                <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}">Edit</a>
+                <button class="btn btn-danger">Delete</button>
             </td>
         </tr>
         
