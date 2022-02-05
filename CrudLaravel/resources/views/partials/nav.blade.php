@@ -2,6 +2,7 @@
     <ul>
         
         <button class="btn btn-warning"><a  class="link-dark"    href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
+        
      <br>
         
         @guest
