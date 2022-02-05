@@ -1,10 +1,10 @@
-@extends('layout')
 
 @section('nombre', 'Contactos')
 
 
 @section('content')
 
+@extends('layout')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@
 </head>
 <body>
     
-    <h1>@lang('Phonebook')</h1>
+    <h1>{{ auth()->user()->name }} @lang('Phonebook') </h1>
     <style>
         b{
             font-size: 3vh
