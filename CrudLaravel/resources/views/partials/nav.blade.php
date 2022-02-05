@@ -1,9 +1,9 @@
 <nav>
     <ul>
         
-        <button class="btn btn-warning"><a  class="link-dark"    href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
+        <button style="margin: 1%" class="btn btn-warning"><a  class="link-dark"    href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
         
-     <br>
+     
         
         @guest
             <li><a href="{{route('login')}}">Login</a></li>

@@ -17,6 +17,7 @@
 </head>
 <body>
     
+    <div class="container-fluid ">
     <h1>{{ auth()->user()->name }} @lang('Phonebook') </h1>
     <style>
         b{
@@ -28,48 +29,48 @@
 
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
-<table class="table table-dark table-striped mt-4">
-    <thead>
-        <th scope="col">Name</th>
-        <th scope="col">Lastname</th>
-        <th scope="col">Telephone</th>
-        <th scope="col">Type</th>
-        <th scope="col">Birthday</th>
-        <th scope="col">Relationship</th>
-        <th scope="col">Description</th>
-        <th scope="col">Favorites</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        @forelse($contactos as $contacto)
-        <tr>
-            <td>{{ $contacto->nombre }} </td>
-            <td>{{ $contacto->apellidos }}</td>
-            <td>{{ $contacto->telefono }}</td>
-            <td>{{ $contacto->tipo }}</td>
-            <td>{{ $contacto->birthday }}</td>
-            <td>{{ $contacto->relationship }}</td>
-            <td>{{ $contacto->description }}</td>
-            <td>{{ $contacto->favorites }}</td>
-            <td>
-                
-                    <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}">Edit</a>
-                    <button class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
-        
-        
-
-    @empty
-        <li>@lang('Phonebook Empty')</li>
-        
-        @endforelse
+    <table class="table table-dark table-striped mt-4">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">Type</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Relationship</th>
+            <th scope="col">Description</th>
+            <th scope="col">Favorites</th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            @forelse($contactos as $contacto)
+            <tr>
+                <td>{{ $contacto->nombre }} </td>
+                <td>{{ $contacto->apellidos }}</td>
+                <td>{{ $contacto->telefono }}</td>
+                <td>{{ $contacto->tipo }}</td>
+                <td>{{ $contacto->birthday }}</td>
+                <td>{{ $contacto->relationship }}</td>
+                <td>{{ $contacto->description }}</td>
+                <td>{{ $contacto->favorites }}</td>
+                <td>
+                    
+                        <a class="btn btn-info" href="{{ route('contactos.edit', $contacto) }}">Edit</a>
+                        <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            
+            
     
-
-</tbody>
-</table>
-
+        @empty
+            <li>@lang('Phonebook Empty')</li>
+            
+            @endforelse
+        
+    
+    </tbody>
+    </table>
+    
+</div>
 <!--En caso de que esta vacia nos sale el siguente mensaje-->
 
     @endsection

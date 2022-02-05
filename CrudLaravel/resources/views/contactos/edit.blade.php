@@ -4,7 +4,7 @@
 
 
 @section('content')
-<h1>Editar Contacto</h1>
+<h1 style="margin: 1%">Editar Contacto</h1>
 
     
 
