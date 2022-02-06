@@ -12,6 +12,7 @@
     <p>{{$contacto->tipo}}</p>
     <p>{{$contacto->email}}</p>
     <p>{{$contacto->birthday}}</p>
+    <p>{{$contacto->profile}}</p>
     <p>{{$contacto->relationship}}</p>
     <p>{{$contacto->description}}</p>
     <small>{{$contacto->favorites}}</small>

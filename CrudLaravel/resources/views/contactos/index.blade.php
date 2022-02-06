@@ -51,6 +51,7 @@
                 <td>{{ $contacto->email }}</td>
                 <td>{{ $contacto->tipo }}</td>
                 <td>{{ $contacto->birthday }}</td>
+                <td>{{ $contacto->profile }}</td>
                 <td>{{ $contacto->relationship }}</td>
                 <td>{{ $contacto->description }}</td>
                 <td>{{ $contacto->favorites }}</td>
