@@ -55,6 +55,15 @@ donde tiene old values para que se guarden los cambios automaticamente y los men
             {!! $errors->first('telefono','<small>:message</small><br>') !!}
           </div>
           <br>
+              <div class="mb-3">
+            
+              
+              <label  class="form-label" ><b>@lang('Email')</b></label>
+              <input type="email" id="email" name="email" value="{{old('email', $contactos->email)}}"
+              class="form-control" required>
+            {!! $errors->first('email','<small>:email</small><br>') !!}
+          </div>
+          <br>
   
           <!--Tipo del Contacto seleccionar si el telefono es Fijo o Movil-->
           <div class="mb-3">

@@ -10,6 +10,7 @@
     <h1>{{$contacto->nombre}}</h1>
     <h2>{{$contacto->telefono}}</h2>
     <p>{{$contacto->tipo}}</p>
+    <p>{{$contacto->email}}</p>
     <p>{{$contacto->birthday}}</p>
     <p>{{$contacto->relationship}}</p>
     <p>{{$contacto->description}}</p>

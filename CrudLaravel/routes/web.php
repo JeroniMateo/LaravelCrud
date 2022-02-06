@@ -17,8 +17,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+
 
 Route::resource('contactos', ContactosController::class)->middleware(['auth']);
+Route::get('/404', function(){
+    return view('errors.404');
+});
+
+Route::get('/403', function(){
+    return view('errors.403');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

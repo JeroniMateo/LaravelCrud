@@ -34,6 +34,7 @@
             <th scope="col">Name</th>
             <th scope="col">Lastname</th>
             <th scope="col">Telephone</th>
+            <th scope="col">Email</th>
             <th scope="col">Type</th>
             <th scope="col">Birthday</th>
             <th scope="col">Relationship</th>
@@ -47,6 +48,7 @@
                 <td>{{ $contacto->nombre }} </td>
                 <td>{{ $contacto->apellidos }}</td>
                 <td>{{ $contacto->telefono }}</td>
+                <td>{{ $contacto->email }}</td>
                 <td>{{ $contacto->tipo }}</td>
                 <td>{{ $contacto->birthday }}</td>
                 <td>{{ $contacto->relationship }}</td>
