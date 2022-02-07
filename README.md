@@ -1,5 +1,6 @@
 # PracticaCrud
 
+## Instrucciones Acceso Crus
 Para acceder a este Crud de una Agenda de contactos, lo primero de todo que tiene que hacer el usuario es hacer login con su correo y contraseña. 
 
 Actualmente en la agenda hay 2 usuarios:
@@ -10,7 +11,9 @@ Actualmente en la agenda hay 2 usuarios:
     - Email: randion@cifpfbmoll.eu
     - Password: secretos
 
-Una vez hecho el login aparecera la Home donde da la bienvenida al Usuario. Hacemos click en la imagen y nos lleva a la agenda en si.
+Una vez hecho el login aparecera la Home donde da la bienvenida al Usuario. 
+Hacemos click en la imagen y nos lleva a la agenda en si.
+
 Cuando estamos en Nuestra agenda solo podemos Crear, editar o eliminar un nuevo contacto especifico si tenemos el rol de admin(En nuestro caso solo lo tiene el Usuario 1) y cerrar sesion si queremos.
 
 

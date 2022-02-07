@@ -1,6 +1,5 @@
 <nav>
     <ul>
-        
         <button style="margin: 1%" class="btn btn-warning"><a  class="link-dark"    href="{{ route('contactos.index') }}">@lang('Contactos')</a></button>
         
      
