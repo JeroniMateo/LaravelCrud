@@ -37,7 +37,6 @@
             <th scope="col">Email</th>
             <th scope="col">Type</th>
             <th scope="col">Birthday</th>
-            <th scope="col">Pro</th>
             <th scope="col">Relationship</th>
             <th scope="col">Description</th>
             <th scope="col">Favorites</th>

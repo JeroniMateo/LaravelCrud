@@ -83,9 +83,6 @@ donde tiene old values para que se guarden los cambios automaticamente y los men
             {!! $errors->first('birthday','<small>:message</small><br>') !!}
           </div>
           <br>
-          
-      
-
   
           <!--Vinculo del Contacto-->
           <div class="mb-3">
