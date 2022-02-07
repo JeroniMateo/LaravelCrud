@@ -37,10 +37,11 @@
             <th scope="col">Email</th>
             <th scope="col">Type</th>
             <th scope="col">Birthday</th>
+            <th scope="col">Pro</th>
             <th scope="col">Relationship</th>
             <th scope="col">Description</th>
             <th scope="col">Favorites</th>
-            <th scope="col"></th>
+            <th scope="col">Actions</th>
         </thead>
         <tbody>
             @forelse($contactos as $contacto)
@@ -51,7 +52,6 @@
                 <td>{{ $contacto->email }}</td>
                 <td>{{ $contacto->tipo }}</td>
                 <td>{{ $contacto->birthday }}</td>
-                <td>{{ $contacto->profile }}</td>
                 <td>{{ $contacto->relationship }}</td>
                 <td>{{ $contacto->description }}</td>
                 <td>{{ $contacto->favorites }}</td>

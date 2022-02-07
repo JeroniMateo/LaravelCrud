@@ -84,12 +84,7 @@ donde tiene old values para que se guarden los cambios automaticamente y los men
           </div>
           <br>
           
-          <div class="mb-3">
-          <label for="" class="form-label"><b>@lang('Profile'):</b></label>
-          <input type="file" name="profile" id="profile" value="{{old('profile', $contactos->profile)}}">
-          {!! $errors->first('profile','<small>:message</small><br>') !!}
-        </div>
-        <br>
+      
 
   
           <!--Vinculo del Contacto-->
