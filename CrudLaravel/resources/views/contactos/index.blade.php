@@ -24,8 +24,10 @@
             font-size: 3vh
         }
     </style>
+@can('create', $contacto)
 
 <button class="btn btn-success"><a  class="link-dark" href="{{ route('contactos.create') }}">@lang('New Contact')</a></button>
+@endcan
 
 
 <!--COn un foreach nos imprime todos los contactos de la agenda-->
