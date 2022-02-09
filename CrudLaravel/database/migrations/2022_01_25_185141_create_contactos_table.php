@@ -19,7 +19,7 @@ class CreateContactosTable extends Migration
             $table->string('nombre')->required();
             $table->string('apellidos')->required();
             $table->integer('telefono')->required()->unique();
-            $table->string('email')->unique();
+            
             $table->string('tipo')->nullable();
             $table->date('birthday')->nullable();
             $table->string('relationship')->nullable();

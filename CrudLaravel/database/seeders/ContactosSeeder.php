@@ -18,7 +18,7 @@ class ContactosSeeder extends Seeder
             'nombre'=>'Jeroni',
             'apellidos'=>'Mateo',
             'telefono'=>918097765,
-            'email'=>'jmateo@cifpfbmoll.eu',
+            
             'tipo'=>'Movil',
             'birthday'=>'2001/01/19',
             'relationship'=>'familia',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateContactosRequest;
 use App\Models\Contacto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ContactosController extends Controller
 {
@@ -54,9 +55,46 @@ class ContactosController extends Controller
         $contacto = new Contacto($request->validated());
 
         $this->authorize('create',$contacto);
+
+        Contacto::create([
+            'name'=> $request->input('nombre'),
+            'lastname'=> $request->input('apellidos'),
+            'telephone'=> $request->input('telefono'),
+            'type'=> $request->input('tipo'),
+            'birthday'=> $request->input('birthday'),
+            'relationship'=> $request->input('relationship'),
+            'description'=> $request->input('description'),
+            'favorites'=> $request->input('favorites'),
+            'user_id' => Auth::user()->id
+        ]);
+
+
+        //Eloquent
+        if($request->hasFile('image')){
+            $image = $request->file('image')->getClientOriginalName();
+            $request->file('image')->storeAs('public/images',$image);
+
+            $contacto = new Contacto();
+
+           $contacto->name = $request->input('nombre');
+           $contacto->lastname = $request->input('apellidos');
+           $contacto->telephone = $request->input('telefono');
+           $contacto->type = json_encode($request->input('tipo'));
+           $contacto->birthday = $request->input('birthday');
+           $contacto->relationship = $request->input('relationship');
+           $contacto->description = $request->input('description');
+           $contacto->favorites = $request->input('favorites');
+           $contacto->user_id = Auth::user()->id;
+           $contacto->save();
+    }
+        
+        //Raw
+       // $sql = "INSERT INTO contactos (nombre, apellidos, telefono, tipo, birthday, relationship, description, favorites) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
 //Antes de crear un contacto se va a validar el nombre,apellidos, telefono, y relacion
         Contacto::create($request->validated()); //['nombre','','tipo','created_at','updated_at']
        return redirect()->route('contactos.index')->with('status','Contacto creado');
+
     }
 
     /**
