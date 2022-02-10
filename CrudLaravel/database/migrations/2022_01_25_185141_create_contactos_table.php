@@ -25,8 +25,8 @@ class CreateContactosTable extends Migration
             $table->string('relationship')->nullable();
             $table->string('description')->nullable();
             $table->boolean('favorites')->nullable();
-            $table->timestamp('created_at')->useCurrent()->nullable();
-            $table->timestamp('updated_at')->useCurrentOnUpdate()->nullable();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
